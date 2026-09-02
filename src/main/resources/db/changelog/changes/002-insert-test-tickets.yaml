@@ -1,0 +1,180 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-insert-test-tickets
+      author: janos
+      context: dev,test
+      changes:
+        - insert:
+            tableName: tickets
+            columns:
+              - column: { name: id, value: "30000000-0000-0000-0000-000000000001" }
+              - column: { name: event_id, value: "10000000-0000-0000-0000-000000000001" }
+              - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000001" }
+              - column: { name: order_id, value: "50000000-0000-0000-0000-000000000001" }
+              - column: { name: ticket_type, value: "STANDARD" }
+              - column: { name: price_paid, valueNumeric: 7990.00 }
+              - column: { name: currency, value: "HUF" }
+              - column: { name: code, value: "JAVA-2026-0001" }
+              - column: { name: status, value: "ACTIVE" }
+              - column: { name: issued_at, valueComputed: "TIMESTAMPTZ '2026-09-10 09:05:00+02:00'" }
+              - column: { name: created_at, valueComputed: "TIMESTAMPTZ '2026-09-10 09:05:00+02:00'" }
+              - column: { name: updated_at, valueComputed: "TIMESTAMPTZ '2026-09-10 09:05:00+02:00'" }
+              - column: { name: version, valueNumeric: 0 }
+
+        - insert:
+            tableName: tickets
+            columns:
+              - column: { name: id, value: "30000000-0000-0000-0000-000000000002" }
+              - column: { name: event_id, value: "10000000-0000-0000-0000-000000000001" }
+              - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000002" }
+              - column: { name: order_id, value: "50000000-0000-0000-0000-000000000002" }
+              - column: { name: ticket_type, value: "VIP" }
+              - column: { name: price_paid, valueNumeric: 14990.00 }
+              - column: { name: currency, value: "HUF" }
+              - column: { name: code, value: "JAVA-2026-0002" }
+              - column: { name: status, value: "RESERVED" }
+              - column: { name: issued_at, valueComputed: "TIMESTAMPTZ '2026-09-11 10:30:00+02:00'" }
+              - column: { name: created_at, valueComputed: "TIMESTAMPTZ '2026-09-11 10:30:00+02:00'" }
+              - column: { name: updated_at, valueComputed: "TIMESTAMPTZ '2026-09-11 10:30:00+02:00'" }
+              - column: { name: version, valueNumeric: 0 }
+
+        - insert:
+            tableName: tickets
+            columns:
+              - column: { name: id, value: "30000000-0000-0000-0000-000000000003" }
+              - column: { name: event_id, value: "10000000-0000-0000-0000-000000000002" }
+              - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000001" }
+              - column: { name: order_id, value: "50000000-0000-0000-0000-000000000003" }
+              - column: { name: ticket_type, value: "STANDARD" }
+              - column: { name: price_paid, valueNumeric: 12990.00 }
+              - column: { name: currency, value: "HUF" }
+              - column: { name: code, value: "JAZZ-2026-0001" }
+              - column: { name: status, value: "ACTIVE" }
+              - column: { name: issued_at, valueComputed: "TIMESTAMPTZ '2026-09-15 08:15:00+02:00'" }
+              - column: { name: created_at, valueComputed: "TIMESTAMPTZ '2026-09-15 08:15:00+02:00'" }
+              - column: { name: updated_at, valueComputed: "TIMESTAMPTZ '2026-09-15 08:15:00+02:00'" }
+              - column: { name: version, valueNumeric: 0 }
+
+        - insert:
+            tableName: tickets
+            columns:
+              - column: { name: id, value: "30000000-0000-0000-0000-000000000004" }
+              - column: { name: event_id, value: "10000000-0000-0000-0000-000000000002" }
+              - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000003" }
+              - column: { name: order_id, value: "50000000-0000-0000-0000-000000000004" }
+              - column: { name: ticket_type, value: "VIP" }
+              - column: { name: price_paid, valueNumeric: 21990.00 }
+              - column: { name: currency, value: "HUF" }
+              - column: { name: code, value: "JAZZ-2026-0002" }
+              - column: { name: status, value: "ACTIVE" }
+              - column: { name: issued_at, valueComputed: "TIMESTAMPTZ '2026-09-16 18:20:00+02:00'" }
+              - column: { name: created_at, valueComputed: "TIMESTAMPTZ '2026-09-16 18:20:00+02:00'" }
+              - column: { name: updated_at, valueComputed: "TIMESTAMPTZ '2026-09-16 18:20:00+02:00'" }
+              - column: { name: version, valueNumeric: 0 }
+
+        - insert:
+            tableName: tickets
+            columns:
+              - column: { name: id, value: "30000000-0000-0000-0000-000000000005" }
+              - column: { name: event_id, value: "10000000-0000-0000-0000-000000000003" }
+              - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000004" }
+              - column: { name: order_id, value: "50000000-0000-0000-0000-000000000005" }
+              - column: { name: ticket_type, value: "WORKSHOP" }
+              - column: { name: price_paid, valueNumeric: 34990.00 }
+              - column: { name: currency, value: "HUF" }
+              - column: { name: code, value: "MICRO-2026-0001" }
+              - column: { name: status, value: "ACTIVE" }
+              - column: { name: issued_at, valueComputed: "TIMESTAMPTZ '2026-09-20 11:00:00+02:00'" }
+              - column: { name: created_at, valueComputed: "TIMESTAMPTZ '2026-09-20 11:00:00+02:00'" }
+              - column: { name: updated_at, valueComputed: "TIMESTAMPTZ '2026-09-20 11:00:00+02:00'" }
+              - column: { name: version, valueNumeric: 0 }
+
+        - insert:
+            tableName: tickets
+            columns:
+              - column: { name: id, value: "30000000-0000-0000-0000-000000000006" }
+              - column: { name: event_id, value: "10000000-0000-0000-0000-000000000003" }
+              - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000005" }
+              - column: { name: order_id, value: "50000000-0000-0000-0000-000000000006" }
+              - column: { name: ticket_type, value: "WORKSHOP" }
+              - column: { name: price_paid, valueNumeric: 34990.00 }
+              - column: { name: currency, value: "HUF" }
+              - column: { name: code, value: "MICRO-2026-0002" }
+              - column: { name: status, value: "REFUNDED" }
+              - column: { name: issued_at, valueComputed: "TIMESTAMPTZ '2026-09-21 14:45:00+02:00'" }
+              - column: { name: created_at, valueComputed: "TIMESTAMPTZ '2026-09-21 14:45:00+02:00'" }
+              - column: { name: updated_at, valueComputed: "TIMESTAMPTZ '2026-09-23 09:10:00+02:00'" }
+              - column: { name: version, valueNumeric: 0 }
+
+        - insert:
+            tableName: tickets
+            columns:
+              - column: { name: id, value: "30000000-0000-0000-0000-000000000007" }
+              - column: { name: event_id, value: "10000000-0000-0000-0000-000000000004" }
+              - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000002" }
+              - column: { name: order_id, value: "50000000-0000-0000-0000-000000000007" }
+              - column: { name: ticket_type, value: "FAMILY" }
+              - column: { name: price_paid, valueNumeric: 4990.00 }
+              - column: { name: currency, value: "HUF" }
+              - column: { name: code, value: "XMAS-2026-0001" }
+              - column: { name: status, value: "RESERVED" }
+              - column: { name: issued_at, valueComputed: "TIMESTAMPTZ '2026-10-01 08:05:00+02:00'" }
+              - column: { name: created_at, valueComputed: "TIMESTAMPTZ '2026-10-01 08:05:00+02:00'" }
+              - column: { name: updated_at, valueComputed: "TIMESTAMPTZ '2026-10-01 08:05:00+02:00'" }
+              - column: { name: version, valueNumeric: 0 }
+
+        - insert:
+            tableName: tickets
+            columns:
+              - column: { name: id, value: "30000000-0000-0000-0000-000000000008" }
+              - column: { name: event_id, value: "10000000-0000-0000-0000-000000000004" }
+              - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000003" }
+              - column: { name: order_id, value: "50000000-0000-0000-0000-000000000007" }
+              - column: { name: ticket_type, value: "FAMILY" }
+              - column: { name: price_paid, valueNumeric: 4990.00 }
+              - column: { name: currency, value: "HUF" }
+              - column: { name: code, value: "XMAS-2026-0002" }
+              - column: { name: status, value: "RESERVED" }
+              - column: { name: issued_at, valueComputed: "TIMESTAMPTZ '2026-10-01 08:05:00+02:00'" }
+              - column: { name: created_at, valueComputed: "TIMESTAMPTZ '2026-10-01 08:05:00+02:00'" }
+              - column: { name: updated_at, valueComputed: "TIMESTAMPTZ '2026-10-01 08:05:00+02:00'" }
+              - column: { name: version, valueNumeric: 0 }
+
+        - insert:
+            tableName: tickets
+            columns:
+              - column: { name: id, value: "30000000-0000-0000-0000-000000000009" }
+              - column: { name: event_id, value: "10000000-0000-0000-0000-000000000005" }
+              - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000004" }
+              - column: { name: order_id, value: "50000000-0000-0000-0000-000000000008" }
+              - column: { name: ticket_type, value: "RUNNER_5K" }
+              - column: { name: price_paid, valueNumeric: 6990.00 }
+              - column: { name: currency, value: "HUF" }
+              - column: { name: code, value: "RUN-2026-5K-0001" }
+              - column: { name: status, value: "ACTIVE" }
+              - column: { name: issued_at, valueComputed: "TIMESTAMPTZ '2026-10-15 07:30:00+02:00'" }
+              - column: { name: created_at, valueComputed: "TIMESTAMPTZ '2026-10-15 07:30:00+02:00'" }
+              - column: { name: updated_at, valueComputed: "TIMESTAMPTZ '2026-10-15 07:30:00+02:00'" }
+              - column: { name: version, valueNumeric: 0 }
+
+        - insert:
+            tableName: tickets
+            columns:
+              - column: { name: id, value: "30000000-0000-0000-0000-000000000010" }
+              - column: { name: event_id, value: "10000000-0000-0000-0000-000000000005" }
+              - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000005" }
+              - column: { name: order_id, value: "50000000-0000-0000-0000-000000000009" }
+              - column: { name: ticket_type, value: "RUNNER_10K" }
+              - column: { name: price_paid, valueNumeric: 8990.00 }
+              - column: { name: currency, value: "HUF" }
+              - column: { name: code, value: "RUN-2026-10K-0001" }
+              - column: { name: status, value: "CANCELLED" }
+              - column: { name: issued_at, valueComputed: "TIMESTAMPTZ '2026-10-16 12:10:00+02:00'" }
+              - column: { name: created_at, valueComputed: "TIMESTAMPTZ '2026-10-16 12:10:00+02:00'" }
+              - column: { name: updated_at, valueComputed: "TIMESTAMPTZ '2026-10-18 16:40:00+02:00'" }
+              - column: { name: version, valueNumeric: 0 }
+
+      rollback:
+        - delete:
+            tableName: tickets
+            where: "id IN ('30000000-0000-0000-0000-000000000001', '30000000-0000-0000-0000-000000000002', '30000000-0000-0000-0000-000000000003', '30000000-0000-0000-0000-000000000004', '30000000-0000-0000-0000-000000000005', '30000000-0000-0000-0000-000000000006', '30000000-0000-0000-0000-000000000007', '30000000-0000-0000-0000-000000000008', '30000000-0000-0000-0000-000000000009', '30000000-0000-0000-0000-000000000010')"
