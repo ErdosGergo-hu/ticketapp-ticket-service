@@ -1,17 +1,20 @@
 package com.erdos.ticketapp.ticketservice.controller;
 
+import com.erdos.ticketapp.ticketservice.dto.request.TicketPurchaseRequest;
 import com.erdos.ticketapp.ticketservice.dto.response.TicketResponse;
 import com.erdos.ticketapp.ticketservice.search.criteria.TicketSearchCriteria;
 import com.erdos.ticketapp.ticketservice.service.TicketService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.UUID;
 
 @RestController
-@RequestMapping("/ticket")
+@RequestMapping("/tickets")
 @RequiredArgsConstructor
 public class TicketController {
 
@@ -22,6 +25,31 @@ public class TicketController {
             TicketSearchCriteria ticketSearchCriteria,
             Pageable pageable) {
         return ticketService.search(ticketSearchCriteria, pageable);
+    }
+
+    @PostMapping
+    public TicketResponse purchase(@RequestBody @Valid TicketPurchaseRequest ticketPurchaseRequest){
+        return ticketService.purchase(ticketPurchaseRequest);
+    }
+
+    @PostMapping("/{id}/cancel")
+    public TicketResponse cancel(@PathVariable("id") UUID id) {
+        return ticketService.cancel(id);
+    }
+
+    @PostMapping("/{id}/refund")
+    public TicketResponse refund(@PathVariable("id") UUID id) {
+        return ticketService.refund(id);
+    }
+
+    @PostMapping("/{id}/check-in")
+    public TicketResponse checkIn(@PathVariable("id") UUID id) {
+        return ticketService.checkIn(id);
+    }
+
+    @GetMapping("/owner/{ownerId}")
+    public List<TicketResponse> ticketByOwnerId(@PathVariable UUID ownerId) {
+        return ticketService.getTicketsByOwnerId(ownerId);
     }
 
     @GetMapping
