@@ -5,10 +5,7 @@ import com.erdos.ticketapp.ticketservice.client.dto.EventStatus;
 import com.erdos.ticketapp.ticketservice.client.dto.EventTicketingInfoResponse;
 import com.erdos.ticketapp.ticketservice.dto.request.TicketPurchaseRequest;
 import com.erdos.ticketapp.ticketservice.dto.response.TicketResponse;
-import com.erdos.ticketapp.ticketservice.exception.TicketCheckInException;
-import com.erdos.ticketapp.ticketservice.exception.TicketNotFoundException;
-import com.erdos.ticketapp.ticketservice.exception.TicketsSoldOutException;
-import com.erdos.ticketapp.ticketservice.exception.TicketSaleUnavailableException;
+import com.erdos.ticketapp.ticketservice.exception.*;
 import com.erdos.ticketapp.ticketservice.kafka.TicketKafkaProducer;
 import com.erdos.ticketapp.ticketservice.mapper.TicketMapper;
 import com.erdos.ticketapp.ticketservice.model.Ticket;
@@ -117,7 +114,7 @@ public class TicketService {
                 .orElseThrow(() -> new TicketNotFoundException(uuid));
 
         if(!TicketStatus.ACTIVE.equals(ticket.getStatus())) {
-            throw new RuntimeException("Cannot cancel the ticket because the status is not ACTIVE");
+            throw new TicketInvalidStateException("Cannot cancel the ticket because the status is not ACTIVE");
         }
 
         ticket.setStatus(TicketStatus.CANCELLED);
@@ -133,7 +130,7 @@ public class TicketService {
                 .orElseThrow(() -> new TicketNotFoundException(uuid));
 
         if(!TicketStatus.ACTIVE.equals(ticket.getStatus()) && !TicketStatus.CANCELLED.equals(ticket.getStatus())) {
-            throw new RuntimeException("Cannot cancel the ticket because the status is not ACTIVE/CANCEL");
+            throw new TicketInvalidStateException("Cannot refund the ticket because the status is not ACTIVE/CANCEL");
         }
 
         ticket.setStatus(TicketStatus.REFUNDED);
