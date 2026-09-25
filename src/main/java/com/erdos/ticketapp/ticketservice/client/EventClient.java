@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.UUID;
 
-@FeignClient(name = "event-service", url = "${clients.event-service.url}")
+@FeignClient(
+        name = "event-service",
+        url = "${clients.event-service.url}",
+        fallbackFactory = EventClientFallbackFactory.class)
 public interface EventClient {
 
     @GetMapping("/events/{id}/ticketing-info")
