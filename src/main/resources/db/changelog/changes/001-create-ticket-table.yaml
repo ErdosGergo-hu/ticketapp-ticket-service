@@ -33,6 +33,14 @@ databaseChangeLog:
                     nullable: false
 
               - column:
+                  name: idempotency_key
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+                    unique: true
+                    uniqueConstraintName: uk_tickets_idempotency_key
+
+              - column:
                   name: ticket_type
                   type: VARCHAR(100)
                   constraints:

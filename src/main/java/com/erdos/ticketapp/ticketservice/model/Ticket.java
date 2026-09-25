@@ -56,6 +56,9 @@ public class Ticket {
     @Column(nullable = false)
     private OffsetDateTime updatedAt;
 
+    @Column(nullable = false, unique = true)
+    private String idempotencyKey;
+
     @Version
     private Long version;
 }

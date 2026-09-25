@@ -18,4 +18,6 @@ public interface TicketRepository
     Optional<Ticket> findById(UUID uuid);
 
     List<Ticket> findByOwnerId(UUID ownerId);
+
+    Optional<Ticket> findByIdempotencyKey(String idempotencyKey);
 }

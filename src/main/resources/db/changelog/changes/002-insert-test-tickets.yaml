@@ -11,6 +11,7 @@ databaseChangeLog:
               - column: { name: event_id, value: "10000000-0000-0000-0000-000000000001" }
               - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000001" }
               - column: { name: order_id, value: "50000000-0000-0000-0000-000000000001" }
+              - column: { name: idempotency_key, value: "seed-ticket-purchase-0001" }
               - column: { name: ticket_type, value: "STANDARD" }
               - column: { name: price_paid, valueNumeric: 7990.00 }
               - column: { name: currency, value: "HUF" }
@@ -28,6 +29,7 @@ databaseChangeLog:
               - column: { name: event_id, value: "10000000-0000-0000-0000-000000000001" }
               - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000002" }
               - column: { name: order_id, value: "50000000-0000-0000-0000-000000000002" }
+              - column: { name: idempotency_key, value: "seed-ticket-purchase-0002" }
               - column: { name: ticket_type, value: "VIP" }
               - column: { name: price_paid, valueNumeric: 14990.00 }
               - column: { name: currency, value: "HUF" }
@@ -45,6 +47,7 @@ databaseChangeLog:
               - column: { name: event_id, value: "10000000-0000-0000-0000-000000000002" }
               - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000001" }
               - column: { name: order_id, value: "50000000-0000-0000-0000-000000000003" }
+              - column: { name: idempotency_key, value: "seed-ticket-purchase-0003" }
               - column: { name: ticket_type, value: "STANDARD" }
               - column: { name: price_paid, valueNumeric: 12990.00 }
               - column: { name: currency, value: "HUF" }
@@ -62,6 +65,7 @@ databaseChangeLog:
               - column: { name: event_id, value: "10000000-0000-0000-0000-000000000002" }
               - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000003" }
               - column: { name: order_id, value: "50000000-0000-0000-0000-000000000004" }
+              - column: { name: idempotency_key, value: "seed-ticket-purchase-0004" }
               - column: { name: ticket_type, value: "VIP" }
               - column: { name: price_paid, valueNumeric: 21990.00 }
               - column: { name: currency, value: "HUF" }
@@ -79,6 +83,7 @@ databaseChangeLog:
               - column: { name: event_id, value: "10000000-0000-0000-0000-000000000003" }
               - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000004" }
               - column: { name: order_id, value: "50000000-0000-0000-0000-000000000005" }
+              - column: { name: idempotency_key, value: "seed-ticket-purchase-0005" }
               - column: { name: ticket_type, value: "WORKSHOP" }
               - column: { name: price_paid, valueNumeric: 34990.00 }
               - column: { name: currency, value: "HUF" }
@@ -96,6 +101,7 @@ databaseChangeLog:
               - column: { name: event_id, value: "10000000-0000-0000-0000-000000000003" }
               - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000005" }
               - column: { name: order_id, value: "50000000-0000-0000-0000-000000000006" }
+              - column: { name: idempotency_key, value: "seed-ticket-purchase-0006" }
               - column: { name: ticket_type, value: "WORKSHOP" }
               - column: { name: price_paid, valueNumeric: 34990.00 }
               - column: { name: currency, value: "HUF" }
@@ -113,6 +119,7 @@ databaseChangeLog:
               - column: { name: event_id, value: "10000000-0000-0000-0000-000000000004" }
               - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000002" }
               - column: { name: order_id, value: "50000000-0000-0000-0000-000000000007" }
+              - column: { name: idempotency_key, value: "seed-ticket-purchase-0007" }
               - column: { name: ticket_type, value: "FAMILY" }
               - column: { name: price_paid, valueNumeric: 4990.00 }
               - column: { name: currency, value: "HUF" }
@@ -130,6 +137,7 @@ databaseChangeLog:
               - column: { name: event_id, value: "10000000-0000-0000-0000-000000000004" }
               - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000003" }
               - column: { name: order_id, value: "50000000-0000-0000-0000-000000000007" }
+              - column: { name: idempotency_key, value: "seed-ticket-purchase-0008" }
               - column: { name: ticket_type, value: "FAMILY" }
               - column: { name: price_paid, valueNumeric: 4990.00 }
               - column: { name: currency, value: "HUF" }
@@ -147,6 +155,7 @@ databaseChangeLog:
               - column: { name: event_id, value: "10000000-0000-0000-0000-000000000005" }
               - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000004" }
               - column: { name: order_id, value: "50000000-0000-0000-0000-000000000008" }
+              - column: { name: idempotency_key, value: "seed-ticket-purchase-0009" }
               - column: { name: ticket_type, value: "RUNNER_5K" }
               - column: { name: price_paid, valueNumeric: 6990.00 }
               - column: { name: currency, value: "HUF" }
@@ -164,6 +173,7 @@ databaseChangeLog:
               - column: { name: event_id, value: "10000000-0000-0000-0000-000000000005" }
               - column: { name: owner_id, value: "40000000-0000-0000-0000-000000000005" }
               - column: { name: order_id, value: "50000000-0000-0000-0000-000000000009" }
+              - column: { name: idempotency_key, value: "seed-ticket-purchase-0010" }
               - column: { name: ticket_type, value: "RUNNER_10K" }
               - column: { name: price_paid, valueNumeric: 8990.00 }
               - column: { name: currency, value: "HUF" }

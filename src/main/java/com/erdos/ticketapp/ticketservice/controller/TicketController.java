@@ -28,8 +28,8 @@ public class TicketController {
     }
 
     @PostMapping
-    public TicketResponse purchase(@RequestBody @Valid TicketPurchaseRequest ticketPurchaseRequest){
-        return ticketService.purchase(ticketPurchaseRequest);
+    public TicketResponse purchase(@RequestHeader("Idempotency-Key") String idempotencyKey, @RequestBody @Valid TicketPurchaseRequest ticketPurchaseRequest){
+        return ticketService.purchase(idempotencyKey, ticketPurchaseRequest);
     }
 
     @PostMapping("/{id}/cancel")
