@@ -3,3 +3,5 @@ databaseChangeLog:
       file: db/changelog/changes/001-create-ticket-table.yaml
   - include:
       file: db/changelog/changes/002-insert-test-tickets.yaml
+  - include:
+      file: db/changelog/changes/003-create-outbox-table.yaml
